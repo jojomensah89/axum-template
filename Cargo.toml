@@ -1,0 +1,40 @@
+[package]
+name = "nasa_rust_implementation"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[workspace.lints.rust]
+unsafe_code = "forbid"
+unused = "allow" # For experimental dev.
+
+[lints]
+workspace = true
+
+
+[dependencies]
+# Axum
+axum = "0.7.4"
+tower-cookies = "0.10"
+tower-http = { version = "0.5", features = ["fs"] }
+
+
+# Async
+tokio =     { version ="1.35.1", features = ["full"] }
+async-trait = "0.1"
+# Serde / json
+serde =  { version ="1.0.195", features = ["derive"] }
+serde_json = "1"
+serde_with = "2"
+
+# Others
+thiserror = "1.0.56"
+lazy-regex="3"
+strum_macros = "0.25"
+uuid = {version = "1", features = ["v4","fast-rng",]}
+
+
+[dev-dependencies]
+anyhow = "1"
+httpc-test = "0.1.1"
