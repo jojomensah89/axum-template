@@ -6,8 +6,8 @@ use std::time::{SystemTime, UNIX_EPOCH};
 use uuid::Uuid;
 
 use crate::ctx::Ctx;
-// use crate::error::ClientError;
-// use crate::error::{Error, Result};
+use crate::error::ClientError;
+use crate::error::{Error, Result};
 
 pub async fn log_request(
     uuid: Uuid,
